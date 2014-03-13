@@ -1,0 +1,8 @@
+#controlHeader ($action $customField.id $customField.name $fieldLayoutItem.required $displayParameters.noHeader)
+    <input type="text" class="text medium-field" id="$customField.id" name="$customField.id"
+           value="$textutils.htmlEncode(${myDate})"/>
+    <a href="#" id="$customField.id-trigger" title="$action.getText('date.picker.select.date')" tabindex="-1">
+            <span class="aui-icon icon-date">$i18n.getText('date.picker.select.date')</span>
+        </a>
+    #datePopup($customField.id "$customField.id-trigger" $dateTimeFormat $dateFormat $timeFormat $dateTimePicker $currentMillis $currentCalendar)
+#controlFooter ($action $fieldLayoutItem.fieldDescription $displayParameters.noHeader)
